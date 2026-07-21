@@ -69,7 +69,7 @@ export default function ExamManagement() {
 
   const fetchQuestions = async () => {
     try {
-      const res = await axios.get(`${API}/questions?status=approved`, { headers })
+      const res = await axios.get(`${API}/questions`, { headers })
       setQuestions(res.data.questions)
     } catch (err) {
       console.error("Failed to load questions")
