@@ -59,7 +59,7 @@ Instructions:
 
     res.json({ success: true, ...parsed })
   } catch (error) {
-    console.error("gradeAnswer error:", error.message, error.response?.data)
+    console.error("gradeAnswer error:", error.message)
     res.status(500).json({ message: "AI grading failed", error: error.message })
   }
 }
